@@ -21,6 +21,7 @@
         </text>
       </svg>
     </div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
     <ul class="nav-list">
      <!-- arrange top to horziontally -->
       
@@ -117,6 +118,11 @@
     // Trigger the celebration effect
     celebrate();
   });
+
+  function toggleMenu() {
+    const navList = document.getElementById('navList');
+    navList.classList.toggle('show');
+  }
 </script>
 
 
