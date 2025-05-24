@@ -19,7 +19,8 @@
           </text>
         </svg>
       </div>
-      <ul class="nav-list">
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+      <ul class="nav-list" id="navList">
        <!-- arrange top to horziontally -->
         
          <li ><a href="index.html" >Home</a></li>
@@ -47,5 +48,25 @@
            </div>
 
      </div>
+    <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Function to trigger confetti animation
+    function celebrate() {
+      confetti({
+        particleCount: 600,
+        spread: 700,
+        origin: { y: 0.6 }
+      });
+    }
+
+    // Trigger the celebration effect
+    celebrate();
+  });
+
+  function toggleMenu() {
+    const navList = document.getElementById('navList');
+    navList.classList.toggle('show');
+  }
+</script>
 </body>
 </html>
